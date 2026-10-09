@@ -1,0 +1,626 @@
+/* ========================================================
+   3D NEURAL CORE & GLOBAL EDGE TOPOLOGY
+   OraRose Tech Architectural Installation
+   Embodying: Modernisasi, AI, & Global Technology
+   ======================================================== */
+
+.neural-topology-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  perspective: 1200px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Ambient Caustic Energy Field (Pedestal Glow) */
+.topology-ambient-caustic {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(72deg);
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 130, 58, 0.24) 0%,
+    rgba(255, 130, 58, 0.08) 42%,
+    rgba(37, 59, 96, 0.04) 65%,
+    transparent 78%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  animation: causticPulse 7s infinite ease-in-out;
+}
+
+@keyframes causticPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateX(72deg) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateX(72deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* 3D Perspective Stage */
+.topology-3d-stage {
+  position: relative;
+  width: 460px;
+  height: 340px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Background Perspective Dot Grid Plane */
+.topology-grid-plane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 300px;
+  transform: translate(-50%, -50%) rotateX(68deg) translateZ(-50px);
+  background-image: radial-gradient(rgba(37, 59, 96, 0.15) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 30%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 30%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* SVG Laser Pathways & Orbits */
+.topology-svg-pathways {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Planetary Global Orbits */
+.orbit-ellipse {
+  fill: none;
+  stroke-dasharray: 4 6;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.orbit-inner {
+  stroke: rgba(255, 130, 58, 0.45);
+  animation: orbitSpin 32s linear infinite;
+  transform-origin: 0 0;
+}
+
+.orbit-outer {
+  stroke: rgba(37, 59, 96, 0.35);
+  animation: orbitSpinRev 44s linear infinite;
+  transform-origin: 0 0;
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitSpinRev {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* Cross-Continental Mesh Arcs */
+.mesh-sync-arc {
+  fill: none;
+  stroke-dasharray: 3 5;
+  stroke-width: 1.2;
+  opacity: 0.3;
+}
+
+.arc-transpacific {
+  stroke: rgba(255, 130, 58, 0.5);
+}
+
+.arc-transatlantic {
+  stroke: rgba(56, 189, 248, 0.5);
+}
+
+/* Laser Conduits */
+.laser-conduit {
+  transition: stroke-width 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.conduit-highlight {
+  stroke-width: 2.5;
+  opacity: 1;
+  stroke-dasharray: 6 3;
+}
+
+/* Data Packets */
+.data-laser-packet {
+  transition: r 0.2s ease;
+}
+
+.burst-speed animateMotion {
+  dur: 0.4s !important;
+}
+
+/* ========================================================
+   1. THE CENTRAL AI NEURAL ENGINE (Cognitive Core)
+   ======================================================== */
+.topology-center-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(35px);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.topology-center-core:focus-visible {
+  outline: 2px solid var(--primary-orange);
+  outline-offset: 4px;
+}
+
+/* Orbital Halo Rings */
+.core-orbital-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px dashed rgba(255, 130, 58, 0.45);
+  box-sizing: border-box;
+}
+
+.ring-outer {
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  margin-top: -48px;
+  transform: rotateX(66deg) rotateZ(0deg);
+  animation: coreRingSpin 18s linear infinite;
+}
+
+.ring-middle {
+  width: 82px;
+  height: 82px;
+  margin-left: -41px;
+  margin-top: -41px;
+  border-color: rgba(37, 59, 96, 0.35);
+  transform: rotateX(66deg) rotateZ(45deg);
+  animation: coreRingSpinRev 14s linear infinite;
+}
+
+.ring-inner {
+  width: 66px;
+  height: 66px;
+  margin-left: -33px;
+  margin-top: -33px;
+  border-color: rgba(255, 130, 58, 0.65);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 0 16px rgba(255, 130, 58, 0.35);
+  transform: rotateX(66deg) rotateZ(90deg);
+  animation: coreRingSpin 10s linear infinite;
+}
+
+@keyframes coreRingSpin {
+  from { transform: rotateX(66deg) rotateZ(0deg); }
+  to { transform: rotateX(66deg) rotateZ(360deg); }
+}
+
+@keyframes coreRingSpinRev {
+  from { transform: rotateX(66deg) rotateZ(0deg); }
+  to { transform: rotateX(66deg) rotateZ(-360deg); }
+}
+
+/* 3D Polyhedral Processor Crystal */
+.core-octahedron-crystal {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #FF823A 0%, #FFAA66 50%, #FF5F14 100%);
+  border-radius: 12px;
+  transform: rotate(45deg);
+  box-shadow: 
+    0 0 28px rgba(255, 130, 58, 0.55),
+    0 10px 20px rgba(255, 95, 20, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  animation: coreCrystalBreathe 4s infinite ease-in-out;
+}
+
+.topology-center-core:hover .core-octahedron-crystal {
+  transform: rotate(45deg) scale(1.12);
+  box-shadow: 
+    0 0 42px rgba(255, 130, 58, 0.8),
+    0 14px 28px rgba(255, 95, 20, 0.4);
+}
+
+@keyframes coreCrystalBreathe {
+  0%, 100% {
+    transform: rotate(45deg) scale(1);
+    box-shadow: 0 0 28px rgba(255, 130, 58, 0.55), 0 10px 20px rgba(255, 95, 20, 0.28);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.05);
+    box-shadow: 0 0 38px rgba(255, 130, 58, 0.72), 0 12px 24px rgba(255, 95, 20, 0.35);
+  }
+}
+
+.core-quantum-spark {
+  transform: rotate(-45deg);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.spark-icon {
+  animation: sparkPulse 2.4s infinite ease-in-out;
+}
+
+@keyframes sparkPulse {
+  0%, 100% { opacity: 0.95; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* Core Label Pill */
+.core-label-pill {
+  position: absolute;
+  bottom: -32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 130, 58, 0.35);
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.08);
+  white-space: nowrap;
+}
+
+.core-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF823A;
+  box-shadow: 0 0 8px #FF823A;
+  animation: dotBlink 1.8s infinite ease-in-out;
+}
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.core-code {
+  font-family: var(--font-mono, 'Space Grotesk', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-navy, #1E3A5F);
+}
+
+/* Shockwave animation on burst */
+.core-shockwave-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 50%;
+  border: 2px solid #FF823A;
+  pointer-events: none;
+  animation: shockwaveExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes shockwaveExpand {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+  100% {
+    transform: scale(18);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* ========================================================
+   2. THE GLOBAL EDGE SATELLITE NODES
+   ======================================================== */
+.topology-edge-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  z-index: 5;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Beacon Anchor Point */
+.edge-node-beacon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beacon-ping {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #FF823A;
+  opacity: 0.75;
+  animation: beaconPingAnim 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes beaconPingAnim {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  80%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.beacon-chip {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid #FF823A;
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-navy, #1E3A5F);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.topology-edge-node:hover .beacon-chip,
+.topology-edge-node.is-active .beacon-chip {
+  transform: scale(1.15);
+  background: var(--primary-orange, #FF823A);
+  color: #FFFFFF;
+}
+
+/* Node Info Cards Positioning */
+.edge-node-card {
+  position: absolute;
+  width: 156px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 58, 95, 0.12);
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Strategic Anchor Positioning for each continent so cards do not collide */
+.node-apac .edge-node-card {
+  right: 18px;
+  bottom: 8px;
+}
+
+.node-amer .edge-node-card {
+  left: 18px;
+  bottom: 8px;
+}
+
+.node-emea .edge-node-card {
+  right: 18px;
+  top: 8px;
+}
+
+.node-asia .edge-node-card {
+  left: 18px;
+  top: 8px;
+}
+
+.topology-edge-node:hover .edge-node-card,
+.topology-edge-node.is-active .edge-node-card {
+  transform: translateZ(24px) scale(1.04);
+  border-color: rgba(255, 130, 58, 0.55);
+  box-shadow: 
+    0 12px 32px rgba(255, 130, 58, 0.18),
+    0 4px 12px rgba(17, 24, 39, 0.08);
+}
+
+.node-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.node-code {
+  font-family: var(--font-mono, 'Space Grotesk', monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted, #6B7280);
+}
+
+.node-latency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono, 'Space Grotesk', monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.10);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.latency-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 6px #10B981;
+  animation: dotBlink 1.6s infinite ease-in-out;
+}
+
+.node-city {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  line-height: 1.2;
+}
+
+.node-role {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-secondary, #4B5563);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================================================
+   GALLERY-GRADE CURATORIAL TELEMETRY
+   ======================================================== */
+.topology-curatorial-footer {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  max-width: 480px;
+  z-index: 2;
+  padding: 0 12px;
+}
+
+.topology-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  background: rgba(255, 130, 58, 0.08);
+  border: 1px solid rgba(255, 130, 58, 0.22);
+  border-radius: 9999px;
+}
+
+.pill-title {
+  font-family: var(--font-mono, 'Space Grotesk', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary-orange, #FF823A);
+}
+
+.topology-desc-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #4B5563);
+  line-height: 1.5;
+  margin: 0;
+  min-height: 38px;
+  transition: color 0.2s ease;
+}
+
+.topology-hint-caption {
+  font-size: 0.68rem;
+  color: var(--text-muted, #9CA3AF);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1024px) {
+  .neural-topology-wrapper {
+    max-width: 500px;
+    min-height: 440px;
+  }
+
+  .topology-3d-stage {
+    transform: scale(0.92);
+  }
+}
+
+@media (max-width: 768px) {
+  .neural-topology-wrapper {
+    max-width: 100%;
+    min-height: 420px;
+  }
+
+  .topology-3d-stage {
+    transform: scale(0.82);
+  }
+
+  .topology-desc-text {
+    font-size: 0.78rem;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topology-3d-stage {
+    transform: scale(0.72);
+  }
+
+  .edge-node-card {
+    width: 115px;
+    padding: 6px 8px;
+  }
+
+  .node-city {
+    font-size: 0.74rem;
+  }
+
+  .node-role {
+    font-size: 0.6rem;
+  }
+}
