@@ -808,6 +808,7 @@
 
 .comparison-table {
   width: 100%;
+  min-width: 580px;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 0.9rem;
@@ -3376,3 +3377,48 @@
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  .nav-cta-minimal {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-inner {
+    gap: 8px;
+  }
+  .modal-overlay {
+    padding: 12px;
+  }
+  .modal-container {
+    padding: 24px 16px;
+    max-height: 94vh;
+  }
+  .modal-title {
+    font-size: 1.25rem;
+  }
+  .floating-wa-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 9px 15px;
+    font-size: 0.82rem;
+  }
+  .pre-footer-cta-card {
+    padding: 28px 16px;
+  }
+  .pre-footer-title {
+    font-size: 1.4rem;
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-standards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+

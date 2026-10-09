@@ -1,0 +1,7 @@
+# Robots.txt for PT. ORAROSE INTELEGENT TECHNOLOGY
+User-agent: *
+Allow: /
+
+# Host & Sitemap
+Host: https://orarose.vercel.app
+Sitemap: https://orarose.vercel.app/sitemap.xml

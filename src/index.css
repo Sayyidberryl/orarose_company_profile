@@ -144,8 +144,20 @@ img {
 }
 
 @media (max-width: 768px) {
+  .section-container {
+    padding: 0 20px;
+  }
   .section-padding {
     padding: 64px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 0 16px;
+  }
+  .section-padding {
+    padding: 48px 0;
   }
 }
 
