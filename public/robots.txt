@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Host & Sitemap
-Host: https://orarose.vercel.app
-Sitemap: https://orarose.vercel.app/sitemap.xml
+Host: https://orarose.id
+Sitemap: https://orarose.id/sitemap.xml

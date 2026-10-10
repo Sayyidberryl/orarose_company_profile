@@ -36,7 +36,7 @@ export default function Hero({ onOpenConsultation }) {
             <button
               type="button"
               onClick={() => onOpenConsultation && onOpenConsultation('Systems Architecture Consultation')}
-              className="btn btn-primary btn-lg"
+              className="btn btn-primary"
               id="hero-primary-cta"
             >
               <span>Discuss Your Infrastructure</span>
@@ -45,7 +45,7 @@ export default function Hero({ onOpenConsultation }) {
 
             <a 
               href="#problem-solutions" 
-              className="btn btn-secondary btn-lg"
+              className="btn btn-secondary"
               id="hero-secondary-cta"
             >
               <Zap size={18} className="icon-orange" />

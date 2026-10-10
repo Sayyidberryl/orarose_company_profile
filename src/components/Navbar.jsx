@@ -43,14 +43,7 @@ export default function Navbar({ onOpenConsultation }) {
 
         {/* Desktop Actions */}
         <div className="nav-actions">
-          <a
-            href="mailto:business@orarose.id"
-            className="nav-chat-minimal"
-            title="Email our Business Desk"
-          >
-            <PhoneCall size={14} />
-            <span>Email</span>
-          </a>
+
 
           <button
             onClick={() => onOpenConsultation()}
@@ -100,14 +93,7 @@ export default function Navbar({ onOpenConsultation }) {
               <span>Discuss Your Needs</span>
               <ArrowUpRight size={16} />
             </button>
-            <a
-              href="mailto:business@orarose.id"
-              className="btn btn-secondary"
-              style={{ width: '100%', marginTop: '10px' }}
-            >
-              <PhoneCall size={16} />
-              <span>Contact Business Desk</span>
-            </a>
+
           </div>
         </div>
       )}

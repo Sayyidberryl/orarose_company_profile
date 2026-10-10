@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ArchitectureBlueprint from './components/ArchitectureBlueprint';
-import AboutOraRose from './components/AboutOraRose';
-import CoreServices from './components/CoreServices';
-import WorkProcess from './components/WorkProcess';
-import MarketSegments from './components/MarketSegments';
 import Footer from './components/Footer';
 import ConsultationModal from './components/ConsultationModal';
-import { PhoneCall } from 'lucide-react';
+import Home from './pages/Home';
+import MarketingCareer from './pages/MarketingCareer';
 import './App.css';
 
 export default function App() {
@@ -37,30 +33,13 @@ export default function App() {
       <Navbar onOpenConsultation={() => handleOpenConsultation()} />
 
       {/* Main Content Sections */}
-      <main id="main-content">
-        {/* 1. Hero Section */}
-        <Hero onOpenConsultation={() => handleOpenConsultation()} />
-
-        {/* 2. Bento Grid: Transformasi Bisnis (Realitas Modern & Nilai Solusi) */}
-        <ArchitectureBlueprint onOpenConsultation={(problem) => handleOpenConsultation(`Solution For: ${problem}`)} />
-
-        {/* 3. Who We Are & Why OraRose (Comparison Table: Vendor Biasa vs OraRose) */}
-        <AboutOraRose onOpenConsultation={() => handleOpenConsultation()} />
-
-        {/* 5. Core Engineering Services */}
-        <CoreServices onSelectService={(service) => handleOpenConsultation(`Service Needed: ${service}`)} />
-
-        {/* 6. How We Engage (6-Step Transparent Collaboration Model) */}
-        <WorkProcess onOpenConsultation={(phase) => handleOpenConsultation(phase)} />
-
-        {/* 6. Segmented Sector Solutions */}
-        <MarketSegments onSelectSegment={(segment) => handleOpenConsultation(`Client Category: ${segment}`)} />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home onOpenConsultation={handleOpenConsultation} />} />
+        <Route path="/career/marketing" element={<MarketingCareer />} />
+      </Routes>
 
       {/* Footer */}
       <Footer onOpenConsultation={() => handleOpenConsultation()} />
-
-
 
       {/* Consultation Modal */}
       <ConsultationModal
@@ -71,3 +50,4 @@ export default function App() {
     </div>
   );
 }
+

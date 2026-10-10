@@ -34,8 +34,8 @@ export default function ArchitectureBlueprint({ onOpenConsultation }) {
       <div className="blueprint-statement-block">
         <div className="bsb-photo-wrap" aria-hidden="true">
           <img
-            src="/foto_orang_opt.jpg"
-            onError={(e) => { e.currentTarget.src = '/foto_orang.jpg'; }}
+            src="/foto_orang_opt.webp"
+            onError={(e) => { e.currentTarget.src = '/foto_orang_opt.jpg'; }}
             alt=""
             className="bsb-photo"
           />
