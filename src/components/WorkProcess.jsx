@@ -22,103 +22,103 @@ export default function WorkProcess({ onOpenConsultation }) {
       id: 'discovery',
       number: '01',
       phase: 'DISCOVERY',
-      title: 'Pemahaman Masalah & Proses Bisnis',
-      sub: 'Mengidentifikasi akar hambatan alur kerja nyata sebelum menentukan solusi teknologi',
-      desc: 'Kami mendengarkan konteks operasional, mewawancarai pengelola proses bisnis harian, dan meninjau kondisi sistem yang ada untuk merumuskan akar masalah serta kriteria keberhasilan yang disepakati.',
+      title: 'Problem & Workflow Discovery',
+      sub: 'Identifying the root cause of operational friction before defining the technology solution.',
+      desc: 'We listen to your operational context, interview daily workflow managers, and review your existing systems to formulate the root problems and agree on success criteria.',
       icon: Search,
-      timing: 'Fase Awal • 1–2 Pekan',
+      timing: 'Initial Phase • 1–2 Weeks',
       activities: [
-        'Wawancara mendalam dengan pemangku kepentingan & operator alur kerja',
-        'Peninjauan sistem existing, format data, dan hambatan operasional tim',
-        'Pemetaan titik bottleneck waktu kerja dan risiko kesalahan manual'
+        'In-depth interviews with stakeholders & workflow operators',
+        'Review of existing systems, data formats, and team bottlenecks',
+        'Mapping of time-wasting choke points and manual error risks'
       ],
       deliverable: 'Business Process Map & Problem Definition Document',
-      clientOutcome: 'Kejelasan akar masalah operasional & kriteria solusi yang tepat sasaran'
+      clientOutcome: 'Clarity on operational root causes & targeted solution criteria.'
     },
     {
       id: 'assessment',
       number: '02',
       phase: 'ASSESSMENT',
-      title: 'Identifikasi Akar Masalah & Peluang',
-      sub: 'Analisis kelayakan teknis, integrasi sistem, dan potensi efisiensi terukur',
-      desc: 'Tahap bedah teknis untuk mengevaluasi kelayakan integrasi, keamanan aliran data, dan menentukan apakah pendekatan modular, refactoring, atau otomasi AI yang paling efisien.',
+      title: 'Root Cause & Feasibility Assessment',
+      sub: 'Technical feasibility analysis, system integration, and measurable efficiency potential.',
+      desc: 'A technical deep dive to evaluate integration feasibility, data security, and determine whether modular refactoring, custom development, or AI automation is the most efficient approach.',
       icon: Target,
-      timing: 'Analisis Kelayakan • Terukur',
+      timing: 'Feasibility Analysis • Scaled',
       activities: [
-        'Audit kelayakan integrasi API, database, dan protokol keamanan',
-        'Identifikasi titik otomasi alur kerja yang memberikan dampak nyata',
-        'Penyusunan trade-offs arsitektur teknis dengan mitigasi risiko terencana'
+        'Audit of API integration feasibility, databases, and security protocols',
+        'Identification of workflow automation points that yield real impact',
+        'Formulation of technical architecture trade-offs with risk mitigation'
       ],
       deliverable: 'Feasibility Analysis & Optimization Scope',
-      clientOutcome: 'Rekomendasi teknis yang masuk akal dan aman untuk diadopsi organisasi'
+      clientOutcome: 'Logical, secure, and adoptable technical recommendations for your organization.'
     },
     {
       id: 'proposal',
       number: '03',
       phase: 'TECHNICAL PROPOSAL',
-      title: 'Desain Arsitektur, Ruang Lingkup & Jadwal',
+      title: 'Architecture Design & Roadmap',
       icon: GitBranch,
-      timing: 'Spesifikasi & Rencana Kerja',
-      sub: 'Spesifikasi teknis transparan, roadmap bertahap, dan komitmen deliverable',
-      desc: 'Menyusun proposal teknis yang berisi technical blueprint arsitektur, batasan deliverable yang eksplisit, pembagian milestone sprint, dan estimasi waktu yang dapat dipertanggungjawabkan.',
+      timing: 'Specification & Planning',
+      sub: 'Transparent technical specs, phased roadmap, and firm deliverable commitments.',
+      desc: 'Formulating a technical proposal containing the architecture blueprint, explicit deliverable boundaries, sprint milestones, and accountable timeline estimations.',
       activities: [
-        'Desain technical architecture blueprint, skema data, dan antarmuka sistem',
-        'Pembagian milestone implementasi ke dalam sprint terukur yang jelas',
-        'Penetapan batasan ruang lingkup (scope) resmi tanpa biaya tersembunyi'
+        'Design of the technical architecture blueprint, data schema, and interfaces',
+        'Structuring implementation milestones into clear, measurable sprints',
+        'Defining the official project scope boundaries with no hidden costs'
       ],
       deliverable: 'Architecture Blueprint & Project Roadmap Agreement',
-      clientOutcome: 'Kepastian ruang lingkup, jadwal rilis, dan transparansi komitmen kerja'
+      clientOutcome: 'Certainty in project scope, release schedules, and work commitments.'
     },
     {
       id: 'engineering',
       number: '04',
       phase: 'ENGINEERING',
-      title: 'Pengembangan, Integrasi & Pengujian',
-      sub: 'Eksekusi kode bersih, integrasi aman, dan pengujian performa ketat',
-      desc: 'Fase rekayasa perangkat lunak dengan standar kode bersih, modularitas sistem, integrasi API terproteksi, serta pengujian berkala pada lingkungan staging sebelum siap diluncurkan.',
+      title: 'Development, Integration & Testing',
+      sub: 'Clean code execution, secure integration, and rigorous performance testing.',
+      desc: 'The software engineering phase adhering to clean code standards, system modularity, protected API integrations, and continuous testing in a staging environment before launch.',
       icon: Code2,
-      timing: 'Sprint Bertahap • Iteratif',
+      timing: 'Phased Sprints • Iterative',
       activities: [
-        'Pembangunan modul perangkat lunak berbasis arsitektur teruji',
-        'Integrasi API aman dengan enkripsi data dan kontrol otorisasi ketat',
-        'Pengujian beban, validasi integritas data, dan simulasi skenario gagal'
+        'Building software modules based on the proven architecture blueprint',
+        'Secure API integration with data encryption and strict authorization controls',
+        'Load testing, data integrity validation, and failure scenario simulations'
       ],
       deliverable: 'Modular Sprints, Secure Integration & QA Reports',
-      clientOutcome: 'Sistem yang teruji stabil dan berfungsi optimal sebelum masuk produksi'
+      clientOutcome: 'A stable, thoroughly tested, and optimally functioning system prior to production.'
     },
     {
       id: 'handover',
       number: '05',
       phase: 'HANDOVER',
-      title: 'Aktivasi, Onboarding & Transfer Pengetahuan',
-      sub: 'Aktivasi sistem, penyediaan akses/kode, dan pelatihan tim internal klien',
-      desc: 'Peluncuran resmi sistem baik melalui aktivasi platform SaaS maupun serah terima kode aplikasi kustom. Kami menyertakan dokumentasi teknis komprehensif dan sesi pelatihan agar tim internal Anda mampu mengoperasikan solusi secara optimal.',
+      title: 'Activation & Knowledge Transfer',
+      sub: 'System activation, code handover, and internal team training.',
+      desc: 'The official system launch, whether via SaaS platform activation or custom application source code handover. We provide comprehensive technical documentation and training sessions.',
       icon: FileCheck2,
-      timing: 'Peluncuran Resmi & Onboarding',
+      timing: 'Official Launch & Onboarding',
       activities: [
-        'Aktivasi deployment, penyediaan akses kredensial, dan konfigurasi sesuai paket',
-        'Dokumentasi teknis arsitektur dan panduan penggunaan lengkap',
-        'Sesi transfer pengetahuan (knowledge transfer) dan pelatihan tim operasional'
+        'Deployment activation, credential provisioning, and package configuration',
+        'Comprehensive technical architecture documentation and user guides',
+        'Knowledge transfer sessions and operational team training'
       ],
       deliverable: 'System Access / Deliverables, Technical Documentation & Training',
-      clientOutcome: 'Kesiapan operasional penuh dengan dukungan dokumentasi dan kapabilitas tim'
+      clientOutcome: 'Full operational readiness backed by complete documentation and team capability.'
     },
     {
       id: 'support',
       number: '06',
       phase: 'SUPPORT',
-      title: 'Pemeliharaan & Pendampingan Berkelanjutan',
-      sub: 'Dukungan teknis responsif dan pemantauan stabilitas sistem pasca-rilis',
-      desc: 'Pendampingan berkelanjutan untuk menjamin stabilitas sistem, pemantauan performa rutin, dan penanganan kendala teknis secara terstruktur sesuai kesepakatan tingkat layanan (SLA).',
+      title: 'Ongoing Maintenance & Support',
+      sub: 'Responsive technical support and post-release system stability monitoring.',
+      desc: 'Continuous assistance to guarantee system stability, regular performance monitoring, and structured technical troubleshooting in accordance with the Service Level Agreement (SLA).',
       icon: Headphones,
-      timing: 'Pendampingan Operasional',
+      timing: 'Operational Support',
       activities: [
-        'Pemantauan stabilitas sistem dan evaluasi performa berkala',
-        'Bantuan teknis responsif dan perbaikan kendala operasional',
-        'Konsultasi peningkatan fungsionalitas seiring pertumbuhan kapasitas bisnis'
+        'System stability monitoring and periodic performance evaluations',
+        'Responsive technical assistance and operational troubleshooting',
+        'Consultation for functional upgrades alongside business capacity growth'
       ],
       deliverable: 'Maintenance Agreement, System Health Reports & SLA Support',
-      clientOutcome: 'Ketenangan operasional dengan pendampingan teknis yang dapat diandalkan'
+      clientOutcome: 'Operational peace of mind with reliable, professional technical accompaniment.'
     }
   ];
 
@@ -132,13 +132,13 @@ export default function WorkProcess({ onOpenConsultation }) {
         <div className="section-center">
           <span className="section-header-badge">
             <span className="badge-dot"></span>
-            HOW WE ENGAGE // MODEL KERJA SAMA
+            HOW WE ENGAGE // ENGAGEMENT MODEL
           </span>
           <h2 className="section-title">
-            Alur Kerja Sama yang <span className="text-highlight">Jelas &amp; Transparan</span>
+            A Clear &amp; Transparent <span className="text-highlight">Workflow</span>
           </h2>
           <p className="section-description">
-            Bagaimana organisasi Anda berkolaborasi dengan OraRose Tech. Enam tahapan terstruktur dari identifikasi awal hingga solusi beroperasi penuh di tangan tim Anda.
+            How your organization collaborates with OraRose Tech. Six structured stages from initial discovery to a fully operational solution in your team's hands.
           </p>
         </div>
 
@@ -179,7 +179,7 @@ export default function WorkProcess({ onOpenConsultation }) {
                 <div className="stage-top-meta">
                   <span className="stage-pill-badge">
                     <CurrentIcon size={14} className="text-orange" />
-                    TAHAP {current.number} • {current.phase}
+                    STAGE {current.number} • {current.phase}
                   </span>
                   <span className="stage-timing-pill">
                     <Clock size={12} />
@@ -192,7 +192,7 @@ export default function WorkProcess({ onOpenConsultation }) {
                 <p className="stage-narrative">{current.desc}</p>
 
                 <div className="stage-activities-box">
-                  <span className="activities-header-label">Aktivitas Utama pada Tahap Ini:</span>
+                  <span className="activities-header-label">Key Activities in this Stage:</span>
                   <ul className="activities-list">
                     {current.activities.map((act, i) => (
                       <li key={i}>
@@ -209,26 +209,26 @@ export default function WorkProcess({ onOpenConsultation }) {
                 <div className="stage-deliverable-panel">
                   <div className="panel-badge-top">
                     <ShieldCheck size={16} className="text-orange" />
-                    <span>OUTPUT &amp; KELUARAN TAHAP INI</span>
+                    <span>STAGE OUTPUTS &amp; DELIVERABLES</span>
                   </div>
 
                   <div className="panel-deliverable-item">
-                    <span className="deliv-sub-label">Deliverable Resmi:</span>
+                    <span className="deliv-sub-label">Official Deliverable:</span>
                     <strong className="deliv-main-val">{current.deliverable}</strong>
                   </div>
 
                   <div className="panel-outcome-item">
-                    <span className="deliv-sub-label">Dampak untuk Klien:</span>
+                    <span className="deliv-sub-label">Client Outcome:</span>
                     <p className="deliv-outcome-text">{current.clientOutcome}</p>
                   </div>
 
                   <div className="panel-cta-box">
                     <button
                       type="button"
-                      onClick={() => onOpenConsultation(`Konsultasi Tahap ${current.number} (${current.phase})`)}
+                      onClick={() => onOpenConsultation(`Consultation for Stage ${current.number} (${current.phase})`)}
                       className="btn btn-primary"
                     >
-                      <span>Mulai Tahap Ini</span>
+                      <span>Initiate This Stage</span>
                       <ArrowRight size={16} />
                     </button>
                   </div>
@@ -268,7 +268,7 @@ export default function WorkProcess({ onOpenConsultation }) {
 
                   <div className="step-summary-bottom">
                     <span className="step-inspect-text">
-                      {isSelected ? 'Sedang Ditampilkan' : 'Lihat Rincian'}
+                      {isSelected ? 'Currently Viewing' : 'View Details'}
                     </span>
                     <ChevronRight size={14} className="inspect-arrow" />
                   </div>
@@ -281,14 +281,14 @@ export default function WorkProcess({ onOpenConsultation }) {
         {/* 4. Bottom Action Banner */}
         <div className="process-bottom-banner">
           <div className="process-banner-text">
-            <h4>Siap Memulai dari Tahap Discovery?</h4>
-            <p>Konsultasikan kendala alur kerja atau kebutuhan modernisasi sistem Anda tanpa komitmen di awal.</p>
+            <h4>Ready to Begin the Discovery Phase?</h4>
+            <p>Consult your workflow bottlenecks or system modernization needs with zero initial commitment.</p>
           </div>
           <button
-            onClick={() => onOpenConsultation('Konsultasi Tahap 01 Discovery')}
+            onClick={() => onOpenConsultation('Stage 01 Discovery Consultation')}
             className="btn btn-primary"
           >
-            <span>Mulai Sesi Discovery</span>
+            <span>Start Discovery Session</span>
             <ArrowRight size={16} />
           </button>
         </div>

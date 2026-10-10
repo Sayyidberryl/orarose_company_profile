@@ -42,37 +42,25 @@ export default function App() {
         <Hero onOpenConsultation={() => handleOpenConsultation()} />
 
         {/* 2. Bento Grid: Transformasi Bisnis (Realitas Modern & Nilai Solusi) */}
-        <ArchitectureBlueprint onOpenConsultation={(problem) => handleOpenConsultation(`Solusi Masalah: ${problem}`)} />
+        <ArchitectureBlueprint onOpenConsultation={(problem) => handleOpenConsultation(`Solution For: ${problem}`)} />
 
         {/* 3. Who We Are & Why OraRose (Comparison Table: Vendor Biasa vs OraRose) */}
         <AboutOraRose onOpenConsultation={() => handleOpenConsultation()} />
 
         {/* 5. Core Engineering Services */}
-        <CoreServices onSelectService={(service) => handleOpenConsultation(`Kebutuhan Layanan: ${service}`)} />
+        <CoreServices onSelectService={(service) => handleOpenConsultation(`Service Needed: ${service}`)} />
 
         {/* 6. How We Engage (6-Step Transparent Collaboration Model) */}
         <WorkProcess onOpenConsultation={(phase) => handleOpenConsultation(phase)} />
 
         {/* 6. Segmented Sector Solutions */}
-        <MarketSegments onSelectSegment={(segment) => handleOpenConsultation(`Kategori Klien: ${segment}`)} />
+        <MarketSegments onSelectSegment={(segment) => handleOpenConsultation(`Client Category: ${segment}`)} />
       </main>
 
       {/* Footer */}
       <Footer onOpenConsultation={() => handleOpenConsultation()} />
 
-      {/* Floating WhatsApp CTA */}
-      <a
-        href="https://wa.me/6281234567890?text=Halo%20Tim%20OraRose%20Tech,%20saya%20ingin%20mendiskusikan%20kebutuhan%20teknologi/otomasi%20untuk%20bisnis%20kami."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="floating-wa-btn"
-        aria-label="Hubungi Tim OraRose Tech via WhatsApp"
-        id="floating-wa-button"
-      >
-        <span className="wa-pulse-dot"></span>
-        <PhoneCall size={18} />
-        <span>Chat Tim Kami</span>
-      </a>
+
 
       {/* Consultation Modal */}
       <ConsultationModal

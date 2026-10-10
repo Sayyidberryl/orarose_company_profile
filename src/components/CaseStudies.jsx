@@ -12,14 +12,14 @@ export default function CaseStudies({ onOpenConsultation }) {
       description:
         'Klien perbankan menghadapi lonjakan jutaan transaksi harian yang membebani arsitektur monolitik mereka. OraRose Tech merancang ulang pipeline pembayaran dengan arsitektur microservices terdistribusi dan menyematkan model AI pendeteksi fraud otonom.',
       metrics: [
-        { label: 'Reduksi False Positive Fraud', value: '-78%' },
-        { label: 'Peningkatan Throughput Transaksi', value: '14x Lipat' },
+        { label: 'Reduksi False Positive Fraud', value: 'Hingga -78%' },
+        { label: 'Peningkatan Throughput Transaksi', value: 'Sampai 14x' },
         { label: 'Latensi Respon API Rata-Rata', value: '< 24ms' },
-        { label: 'Downtime Selama Migrasi', value: '0 Detik' }
+        { label: 'Uptime Selama Migrasi', value: '99.99%' }
       ],
       techStack: ['Go', 'Kafka Cluster', 'FastAPI AI Engine', 'PostgreSQL HA', 'Kubernetes'],
       testimonial:
-        '"OraRose Tech bukan sekadar agensi software biasa, mereka adalah arsitek sistem sejati. Migrasi jutaan transaksi tanpa downtime 1 detik pun adalah prestasi rekayasa yang luar biasa."'
+        '"OraRose Tech bukan sekadar agensi software biasa, mereka adalah arsitek sistem sejati. Migrasi jutaan transaksi tanpa kendala operasional adalah prestasi rekayasa yang luar biasa."'
     },
     {
       clientSector: 'Manufaktur & Rantai Pasok Skala Menengah (SME)',
@@ -28,9 +28,9 @@ export default function CaseStudies({ onOpenConsultation }) {
       description:
         'Perusahaan distribusi skala menengah mengalami bottleneck parah dalam pemrosesan ribuan surat jalan dan rekonsiliasi manual. Kami mengimplementasikan platform terpadu dengan agen OCR kognitif dan otomatisasi alur kerja gudang.',
       metrics: [
-        { label: 'Kecepatan Proses Order Gudang', value: '+320%' },
+        { label: 'Kecepatan Proses Order Gudang', value: 'Hingga +320%' },
         { label: 'Efisiensi Biaya Operasional', value: 'Rp 850 Jt/Th' },
-        { label: 'Tingkat Akurasi Rekonsiliasi', value: '99.9%' },
+        { label: 'Tingkat Akurasi Rekonsiliasi', value: 'Hingga 99.9%' },
         { label: 'Waktu Onboarding Karyawan', value: '< 3 Hari' }
       ],
       techStack: ['React', 'Node.js', 'Python OCR Vision', 'Redis', 'Docker'],

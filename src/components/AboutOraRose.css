@@ -1,0 +1,116 @@
+/* ========================================================
+   PHILOSOPHY SECTION — The OraRose Standard
+   ======================================================== */
+
+.philosophy-section {
+  position: relative;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-light);
+}
+
+.philosophy-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 64px auto;
+}
+
+.philosophy-lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 24px;
+}
+
+/* ─── 4 Pillars Grid (2x2) ───────────────────────────── */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.philosophy-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 130, 58, 0.3);
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.08);
+}
+
+.philosophy-card-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.philosophy-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 130, 58, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.philosophy-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.philosophy-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-orange);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.philosophy-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── CTA Block ──────────────────────────────────────── */
+.philosophy-cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-header {
+    margin-bottom: 40px;
+  }
+  
+  .philosophy-card-inner {
+    padding: 32px 24px;
+  }
+  
+  .philosophy-title {
+    font-size: 1.3rem;
+  }
+}

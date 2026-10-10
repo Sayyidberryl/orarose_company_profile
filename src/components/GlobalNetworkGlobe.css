@@ -1,6 +1,6 @@
 /* ========================================================
    GLOBAL NETWORK GLOBE (Modern Cyber & WebGL Aesthetics)
-   Inspired by Stripe / GitHub / Linear 3D WebGL Showcases
+   Executive & Enterprise Grade 3D Mesh
    ======================================================== */
 
 .global-globe-wrapper {
@@ -18,20 +18,20 @@
 /* Ambient Atmospheric Auroras behind Globe */
 .globe-ambient-aura {
   position: absolute;
-  top: 36%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 480px;
-  height: 480px;
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 130, 58, 0.20) 0%,
-    rgba(56, 189, 248, 0.12) 40%,
+    rgba(255, 130, 58, 0.18) 0%,
+    rgba(56, 189, 248, 0.12) 38%,
     rgba(30, 58, 95, 0.08) 65%,
     transparent 80%
   );
-  filter: blur(52px);
+  filter: blur(56px);
   pointer-events: none;
   z-index: 0;
   animation: globeAuraPulse 7s infinite ease-in-out;
@@ -39,19 +39,19 @@
 
 .globe-aurora-glow {
   position: absolute;
-  top: 38%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(30, 58, 95, 0.18) 0%,
-    rgba(255, 130, 58, 0.08) 50%,
+    rgba(30, 58, 95, 0.20) 0%,
+    rgba(255, 130, 58, 0.07) 50%,
     transparent 75%
   );
-  filter: blur(36px);
+  filter: blur(40px);
   pointer-events: none;
   z-index: 0;
 }
@@ -67,17 +67,26 @@
   }
 }
 
-/* Floating Status Badge (Top-Left) */
-.globe-hud-header {
+/* Floating Status Badges — Modern HUD (Top-Left & Top-Right) */
+.globe-hud-overlay {
   position: absolute;
-  top: 6px;
-  left: 8px;
+  top: 4px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
   z-index: 10;
+  pointer-events: none;
+}
+
+.globe-hud-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 14px;
-  background: rgba(255, 255, 255, 0.88);
+  gap: 7px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(30, 58, 95, 0.12);
@@ -85,15 +94,12 @@
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
 }
 
-.globe-live-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.globe-hud-text {
   font-family: var(--font-mono, monospace);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: #10B981;
+  color: var(--accent-navy, #1E3A5F);
 }
 
 .live-pulse-dot {
@@ -110,42 +116,24 @@
   50% { opacity: 0.35; transform: scale(0.75); }
 }
 
-.globe-hud-divider {
-  color: rgba(30, 58, 95, 0.25);
-  font-size: 0.75rem;
-}
-
-.globe-hud-title {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--accent-navy, #1E3A5F);
-}
-
-/* Floating Latency Chip (Top-Right) */
-.globe-telemetry-chip {
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  z-index: 10;
+.globe-telemetry-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.88);
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(30, 58, 95, 0.12);
   border-radius: 9999px;
   font-family: var(--font-mono, monospace);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 600;
   color: #475569;
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
 }
 
-.globe-telemetry-chip strong {
+.globe-telemetry-badge strong {
   color: var(--primary-orange, #FF823A);
 }
 
@@ -161,7 +149,7 @@
   cursor: grab;
   touch-action: none;
   z-index: 1;
-  margin-top: 10px;
+  margin-top: 18px;
   transition: transform 0.2s ease;
 }
 
@@ -176,8 +164,8 @@
   aspect-ratio: 1;
   border-radius: 50%;
   pointer-events: none;
-  filter: drop-shadow(0 20px 48px rgba(30, 58, 95, 0.20))
-          drop-shadow(0 4px 16px rgba(255, 130, 58, 0.12));
+  filter: drop-shadow(0 20px 48px rgba(30, 58, 95, 0.22))
+          drop-shadow(0 4px 16px rgba(255, 130, 58, 0.14));
 }
 
 /* Dual Concentric Holographic Orbital Rings */
@@ -193,14 +181,14 @@
   transform: translate(-50%, -50%) rotateX(74deg);
   width: 490px;
   height: 490px;
-  border: 1px dashed rgba(255, 130, 58, 0.40);
+  border: 1px dashed rgba(255, 130, 58, 0.38);
   animation: ringSlowRotate 42s linear infinite;
 }
 
 .globe-ring-accent.outer-ring {
   transform: translate(-50%, -50%) rotateX(74deg) rotateZ(45deg);
-  width: 530px;
-  height: 530px;
+  width: 535px;
+  height: 535px;
   border: 1px dotted rgba(56, 189, 248, 0.28);
   animation: ringReverseRotate 56s linear infinite;
 }
@@ -215,158 +203,121 @@
   to { transform: translate(-50%, -50%) rotateX(74deg) rotateZ(0deg); }
 }
 
-/* Active Hub Details Glass Card */
-.globe-active-hub-card {
+/* Active Node Floating Callout Badge inside canvas */
+.globe-active-node-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 130, 58, 0.35);
+  border-radius: 9999px;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.node-tag-flag {
+  font-size: 0.95rem;
+}
+
+.node-tag-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+.node-tag-status {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #FF823A;
+  background: rgba(255, 130, 58, 0.18);
+  padding: 2px 7px;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+}
+
+.globe-hubs-dock {
   width: 100%;
-  max-width: 490px;
-  background: rgba(255, 255, 255, 0.92);
+  max-width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  z-index: 6;
+}
+
+.globe-dock-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(30, 58, 95, 0.12);
-  border-radius: 16px;
-  padding: 14px 18px;
-  margin-top: 14px;
-  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
-  z-index: 5;
-  transition: all 0.25s ease;
-}
-
-.globe-active-hub-card:hover {
-  border-color: rgba(255, 130, 58, 0.35);
-  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
-}
-
-.hub-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.hub-card-title-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hub-flag {
-  font-size: 1.05rem;
-}
-
-.hub-name {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #0F172A;
-}
-
-.hub-status-badge {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #1E3A5F;
-  background: rgba(30, 58, 95, 0.07);
-  padding: 2px 8px;
   border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.hub-ping-metric {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-family: var(--font-mono, monospace);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #10B981;
+.globe-dock-inner::-webkit-scrollbar {
+  display: none;
 }
 
-.ping-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #10B981;
-  box-shadow: 0 0 8px #10B981;
-}
-
-.hub-card-description {
-  font-size: 0.82rem;
-  color: #64748B;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Quick Interactive Hub Selector Pills */
-.globe-hub-selector-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 14px;
-  z-index: 5;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hub-selector-label {
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: #64748B;
-}
-
-.hub-pills-list {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.hub-pill-btn {
+.dock-hub-btn {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(30, 58, 95, 0.12);
+  background: transparent;
+  border: 1px solid transparent;
   border-radius: 9999px;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  color: #334155;
+  color: #475569;
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
-.hub-pill-btn:hover {
-  background: #FFFFFF;
+.dock-hub-btn:hover {
+  background: rgba(30, 58, 95, 0.05);
   color: #0F172A;
-  border-color: rgba(255, 130, 58, 0.40);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 130, 58, 0.12);
 }
 
-.hub-pill-btn.is-active {
+.dock-hub-btn.active {
   background: #0F172A;
   color: #FFFFFF;
   border-color: #0F172A;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.15);
 }
 
-.hub-pill-btn.is-active .pill-name {
-  color: #FFFFFF;
-}
-
-.pill-flag {
+.dock-flag {
   font-size: 0.85rem;
 }
 
-.pill-name {
+.dock-label {
   color: inherit;
 }
 
-/* Minimal Instruction Hint */
+/* Subtle Micro-Interaction Hint */
 .globe-interactive-hint {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 0.72rem;
   color: #94A3B8;
   font-weight: 500;
@@ -430,15 +381,10 @@
     height: 380px;
   }
 
-  .globe-hud-header,
-  .globe-telemetry-chip {
-    top: 2px;
-    padding: 3px 10px;
-    font-size: 0.6rem;
-  }
-
-  .globe-active-hub-card {
-    padding: 12px 14px;
+  .globe-hud-badge,
+  .globe-telemetry-badge {
+    padding: 4px 10px;
+    font-size: 0.62rem;
   }
 }
 
@@ -449,42 +395,79 @@
   }
 
   .globe-canvas-container {
-    width: min(300px, calc(100vw - 36px));
-    height: min(300px, calc(100vw - 36px));
+    width: min(320px, calc(100vw - 36px));
+    height: min(320px, calc(100vw - 36px));
   }
 
   .globe-webgl-canvas {
     width: 100%;
     height: 100%;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 310px;
+    max-height: 310px;
   }
 
   .globe-ring-accent.inner-ring {
-    width: min(290px, calc(100vw - 42px));
-    height: min(290px, calc(100vw - 42px));
+    width: min(300px, calc(100vw - 42px));
+    height: min(300px, calc(100vw - 42px));
   }
 
   .globe-ring-accent.outer-ring {
-    width: min(310px, calc(100vw - 24px));
-    height: min(310px, calc(100vw - 24px));
+    width: min(320px, calc(100vw - 24px));
+    height: min(320px, calc(100vw - 24px));
   }
 
-  .globe-hud-header {
-    font-size: 0.58rem;
-    padding: 3px 8px;
-  }
-
-  .globe-telemetry-chip {
+  .globe-telemetry-badge {
     display: none;
   }
 
-  .hub-pills-row {
-    gap: 5px;
+  .globe-dock-inner {
+    padding: 4px;
+    max-width: calc(100vw - 32px);
   }
 
-  .hub-pill-btn {
-    padding: 4px 8px;
-    font-size: 0.72rem;
+  .dock-hub-btn {
+    padding: 4px 9px;
+    font-size: 0.70rem;
   }
+}
+
+/* ─── Futuristic Telemetry Feed ─── */
+.globe-telemetry-feed {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(10, 15, 26, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-width: 180px;
+}
+.tf-header {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 6px;
+}
+.tf-data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.tf-value {
+  color: #ffffff;
+  font-weight: 500;
+}
+.tf-value.text-orange {
+  color: var(--primary-orange);
+  text-shadow: 0 0 8px rgba(255, 130, 58, 0.4);
+}
+  text-shadow: 0 0 8px rgba(255, 130, 58, 0.4);
 }

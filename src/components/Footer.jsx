@@ -21,13 +21,13 @@ export default function Footer({ onOpenConsultation }) {
           <div className="pre-footer-content">
             <span className="section-header-badge" style={{ background: 'rgba(255, 130, 58, 0.2)' }}>
               <Sparkles size={14} color="#FF823A" />
-              KONSULTASI TEKNOLOGI &amp; OTOMASI
+              TECHNOLOGY &amp; AUTOMATION CONSULTATION
             </span>
             <h2 className="pre-footer-title">
-              Siap Membangun Sistem yang Menggerakkan <span className="text-highlight">Pertumbuhan Nyata?</span>
+              Ready to Build Systems that Drive <span className="text-highlight">Real Growth?</span>
             </h2>
             <p className="pre-footer-subtitle">
-              Diskusikan kebutuhan teknologi Anda hari ini bersama OraRose Tech untuk mewujudkan sistem perangkat lunak yang andal, aman, dan efisien.
+              Discuss your technology needs today with OraRose Tech to actualize reliable, secure, and efficient software infrastructure.
             </p>
           </div>
           <div className="pre-footer-actions">
@@ -37,16 +37,15 @@ export default function Footer({ onOpenConsultation }) {
               className="btn btn-primary btn-lg"
               id="footer-primary-cta"
             >
-              <span>Diskusikan Kebutuhan Anda</span>
+              <span>Discuss Your Needs</span>
               <ArrowUpRight size={18} />
             </button>
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Tim%20OraRose%20Tech,%20saya%20ingin%20mendiskusikan%20kebutuhan%20teknologi/otomasi%20untuk%20bisnis%20kami."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:business@orarose.id"
               className="btn btn-secondary btn-lg"
             >
-              <span>Hubungi via WhatsApp</span>
+              <Mail size={18} />
+              <span style={{marginLeft: '8px'}}>Contact Business Desk</span>
             </a>
           </div>
         </div>
@@ -58,43 +57,43 @@ export default function Footer({ onOpenConsultation }) {
         <div className="footer-col-brand">
           <Logo size="normal" />
           <p className="footer-brand-bio">
-            <strong>OraRose Tech</strong> adalah studio rekayasa teknologi yang berfokus pada pembangunan sistem cerdas, integrasi AI, dan infrastruktur perangkat lunak modern untuk mendukung efisiensi serta ketahanan bisnis.
+            <strong>OraRose Tech</strong> is an engineering studio focused on building intelligent systems, AI integrations, and modern software infrastructure to drive business efficiency and resilience.
           </p>
 
           <div className="footer-motto-box">
             <em>"The Architect of Intelligent Systems"</em>
             <p className="footer-slogan">
-              Orarose: Engineering Intelligent Software and Modern Digital Infrastructure.
+              OraRose: Engineering Intelligent Software and Modern Digital Infrastructure.
             </p>
           </div>
         </div>
 
         {/* Navigation Column: Solutions */}
         <div className="footer-col-nav">
-          <h4 className="footer-nav-heading">Navigasi Utama</h4>
+          <h4 className="footer-nav-heading">Main Navigation</h4>
           <ul className="footer-links">
-            <li><a href="#about">Tentang OraRose (Who We Are)</a></li>
-            <li><a href="#services">Solusi Rekayasa AI &amp; Software</a></li>
-            <li><a href="#process">Alur Kerja (How We Work)</a></li>
-            <li><a href="#solutions">Pendekatan Sektor Klien</a></li>
-            <li><a href="#architecture">Pendekatan Nilai &amp; Solusi</a></li>
+            <li><a href="#about">Philosophy (Who We Are)</a></li>
+            <li><a href="#services">AI &amp; Software Engineering</a></li>
+            <li><a href="#process">Engagement (How We Work)</a></li>
+            <li><a href="#solutions">Sector Strategy</a></li>
+            <li><a href="#problem-solutions">Value Proposition</a></li>
           </ul>
         </div>
 
         {/* Navigation Column: Market Segments */}
         <div className="footer-col-nav">
-          <h4 className="footer-nav-heading">Standar &amp; Tata Kelola</h4>
+          <h4 className="footer-nav-heading">Standards &amp; Governance</h4>
           <ul className="footer-links">
             <li><a href="#about">Zero-Trust Architecture</a></li>
-            <li><a href="#about">Prinsip Keamanan ISO 27001</a></li>
+            <li><a href="#about">ISO 27001 Security Principles</a></li>
             <li><a href="#about">Client-Owned Deliverables</a></li>
-            <li><a href="#engagement">Model Kerja Sama Transparan</a></li>
+            <li><a href="#engagement">Transparent Engagement Model</a></li>
           </ul>
         </div>
 
         {/* Contact & Legal Entity Column */}
         <div className="footer-col-contact">
-          <h4 className="footer-nav-heading">Identitas &amp; Kontak Resmi</h4>
+          <h4 className="footer-nav-heading">Corporate Identity &amp; Contact</h4>
           <div className="footer-contact-items">
             <div className="contact-item">
               <Building size={16} className="contact-icon text-orange" />
@@ -102,7 +101,7 @@ export default function Footer({ onOpenConsultation }) {
             </div>
             <div className="contact-item">
               <Mail size={16} className="contact-icon text-orange" />
-              <a href="mailto:contact@orarose.tech">contact@orarose.tech</a>
+              <a href="mailto:business@orarose.id">business@orarose.id</a>
             </div>
             <div className="contact-item">
               <Phone size={16} className="contact-icon text-orange" />
@@ -110,7 +109,7 @@ export default function Footer({ onOpenConsultation }) {
             </div>
             <div className="contact-item">
               <Clock size={16} className="contact-icon text-orange" />
-              <span>Senin - Jumat: 08:30 - 18:00 WIB</span>
+              <span>Monday - Friday: 08:30 - 18:00 WIB</span>
             </div>
             <div className="contact-item">
               <MapPin size={16} className="contact-icon text-orange" />
@@ -124,7 +123,7 @@ export default function Footer({ onOpenConsultation }) {
       <div className="footer-bottom-bar">
         <div className="section-container footer-bottom-inner">
           <div className="footer-copy">
-            © {CURRENT_YEAR} <strong>PT. ORAROSE INTELEGENT TECHNOLOGY</strong>. Seluruh Hak Cipta Dilindungi Undang-Undang.
+            © {CURRENT_YEAR} <strong>PT. ORAROSE INTELEGENT TECHNOLOGY</strong>. All Rights Reserved.
           </div>
 
           <div className="footer-standards">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Zap, CheckCircle2, XCircle, ArrowUpRight, ShieldCheck, Cpu } from 'lucide-react';
+import { ArrowRight, Zap, CheckCircle2, XCircle } from 'lucide-react';
 import './NarrativeBridge.css';
 
 /**

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Send, PhoneCall, ShieldCheck, CheckCircle2, Sparkles, Building, Mail, User, Phone, MessageSquare } from 'lucide-react';
+import { X, Send, ShieldCheck, CheckCircle2, Sparkles, Building, Mail, User, Phone, MessageSquare } from 'lucide-react';
 
 export default function ConsultationModal({ isOpen, onClose, initialData = null }) {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
         setFormData(prev => ({
           ...prev,
           interest: initialData.serviceFocus || prev.interest,
-          message: initialData.summary ? `Estimasi dari kalkulator: ${initialData.summary}` : prev.message
+          message: initialData.summary ? `Estimate from calculator: ${initialData.summary}` : prev.message
         }));
       }
     }
@@ -44,18 +44,19 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
     setSubmitted(true);
   };
 
-  const handleSendToWhatsApp = () => {
-    const text = encodeURIComponent(
-      `Halo Tim OraRose Tech,\n\n` +
-      `Saya ingin mendiskusikan kebutuhan teknologi/otomasi untuk bisnis kami:\n` +
-      `• Nama: ${formData.fullName || 'Rekan Bisnis'}\n` +
-      `• Perusahaan: ${formData.companyName || '-'}\n` +
+  const handleSendToEmail = () => {
+    const subject = encodeURIComponent('Inquiry: Technology Consultation Request');
+    const body = encodeURIComponent(
+      `Hello OraRose Tech Team,\n\n` +
+      `I would like to discuss technology/automation needs for our business:\n` +
+      `• Name: ${formData.fullName || '-'}\n` +
+      `• Company: ${formData.companyName || '-'}\n` +
       `• Email: ${formData.workEmail || '-'}\n` +
-      `• Kategori: ${formData.interest}\n` +
-      `• Kebutuhan/Catatan: ${formData.message || 'Diskusi Kebutuhan Sistem & Otomasi'}\n\n` +
-      `Terima kasih!`
+      `• Category: ${formData.interest}\n` +
+      `• Needs/Notes: ${formData.message || 'System & Automation Discussion'}\n\n` +
+      `Thank you!`
     );
-    window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+    window.location.href = `mailto:business@orarose.id?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -64,7 +65,7 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
         <button 
           onClick={onClose} 
           className="modal-close-btn"
-          aria-label="Tutup jendela konsultasi"
+          aria-label="Close consultation window"
         >
           <X size={22} />
         </button>
@@ -74,11 +75,11 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
             <div className="modal-header">
               <span className="section-header-badge">
                 <Sparkles size={14} />
-                DISCOVERY &amp; KONSULTASI TEKNOLOGI
+                DISCOVERY &amp; TECHNOLOGY CONSULTATION
               </span>
-              <h3 className="modal-title">Diskusikan Kebutuhan Teknologi Anda</h3>
+              <h3 className="modal-title">Discuss Your Technology Needs</h3>
               <p className="modal-subtitle">
-                Konsultasikan tantangan sistem, modernisasi perangkat lunak, atau kebutuhan otomatisasi AI bisnis Anda bersama tim engineering <strong>OraRose Tech</strong>.
+                Consult your system challenges, software modernization, or AI automation needs directly with <strong>OraRose Tech's</strong> engineering team.
               </p>
             </div>
 
@@ -87,14 +88,14 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
                 <div className="form-group">
                   <label htmlFor="fullName">
                     <User size={15} />
-                    <span>Nama Lengkap *</span>
+                    <span>Full Name *</span>
                   </label>
                   <input
                     type="text"
                     id="fullName"
                     name="fullName"
                     required
-                    placeholder="Contoh: Budi Pratama"
+                    placeholder="E.g. John Doe"
                     value={formData.fullName}
                     onChange={handleChange}
                     className="form-input"
@@ -104,14 +105,14 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
                 <div className="form-group">
                   <label htmlFor="companyName">
                     <Building size={15} />
-                    <span>Nama Perusahaan / Startup *</span>
+                    <span>Company / Startup Name *</span>
                   </label>
                   <input
                     type="text"
                     id="companyName"
                     name="companyName"
                     required
-                    placeholder="Contoh: PT Mega Inovasi Nusantara"
+                    placeholder="E.g. Acme Corporation"
                     value={formData.companyName}
                     onChange={handleChange}
                     className="form-input"
@@ -123,14 +124,14 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
                 <div className="form-group">
                   <label htmlFor="workEmail">
                     <Mail size={15} />
-                    <span>Email Korporat / Bisnis *</span>
+                    <span>Corporate / Business Email *</span>
                   </label>
                   <input
                     type="email"
                     id="workEmail"
                     name="workEmail"
                     required
-                    placeholder="nama@perusahaan.com"
+                    placeholder="name@company.com"
                     value={formData.workEmail}
                     onChange={handleChange}
                     className="form-input"
@@ -140,14 +141,14 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
                 <div className="form-group">
                   <label htmlFor="phoneNumber">
                     <Phone size={15} />
-                    <span>Nomor WhatsApp / Telepon *</span>
+                    <span>Phone Number *</span>
                   </label>
                   <input
                     type="tel"
                     id="phoneNumber"
                     name="phoneNumber"
                     required
-                    placeholder="0812-xxxx-xxxx"
+                    placeholder="+1 234 567 890"
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     className="form-input"
@@ -156,7 +157,7 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
               </div>
 
               <div className="form-group">
-                <label htmlFor="interest">Fokus Kebutuhan Utama:</label>
+                <label htmlFor="interest">Primary Area of Interest:</label>
                 <select
                   id="interest"
                   name="interest"
@@ -164,23 +165,23 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
                   onChange={handleChange}
                   className="form-select"
                 >
-                  <option value="AI-Driven Operations">AI-Driven Operations (Model Privat & Agentic Workflows)</option>
+                  <option value="AI-Driven Operations">AI-Driven Operations (Private Models & Agentic Workflows)</option>
                   <option value="Legacy System Modernization">Legacy System Modernization (Replatforming & Microservices)</option>
                   <option value="Enterprise Web & Mobile Architecture">Enterprise Web & Mobile Architecture (Custom Build)</option>
-                  <option value="Full Digital Overhaul">Full Digital Overhaul (Sistem Menyeluruh)</option>
+                  <option value="Full Digital Overhaul">Full Digital Overhaul (Comprehensive Systems)</option>
                 </select>
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">
                   <MessageSquare size={15} />
-                  <span>Kebutuhan Spesifik / Tantangan Sistem Saat Ini:</span>
+                  <span>Specific Needs / Current System Challenges:</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={3}
-                  placeholder="Ceritakan gambaran sistem Anda saat ini, jumlah pengguna, atau kendala yang ingin diatasi..."
+                  placeholder="Describe your current system landscape, user base, or the specific friction you want to resolve..."
                   value={formData.message}
                   onChange={handleChange}
                   className="form-textarea"
@@ -189,23 +190,23 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
 
               <div className="form-actions-split">
                 <button type="submit" className="btn btn-primary btn-submit-main">
-                  <span>Kirim Permintaan & Jadwalkan Sesi</span>
+                  <span>Submit Request &amp; Schedule Session</span>
                   <Send size={16} />
                 </button>
 
                 <button 
                   type="button" 
-                  onClick={handleSendToWhatsApp}
+                  onClick={handleSendToEmail}
                   className="btn btn-secondary btn-submit-wa"
                 >
-                  <PhoneCall size={16} className="text-orange" />
-                  <span>Hubungi Cepat via WhatsApp</span>
+                  <Mail size={16} className="text-orange" />
+                  <span>Contact Business Desk via Email</span>
                 </button>
               </div>
 
               <div className="modal-trust-footnote">
                 <ShieldCheck size={14} className="text-green" />
-                <span>Privasi aman. Kami menandatangani NDA resmi sebelum meninjau data internal perusahaan Anda.</span>
+                <span>Your privacy is secure. We sign an official NDA before reviewing any internal company data.</span>
               </div>
             </form>
           </div>
@@ -214,27 +215,27 @@ export default function ConsultationModal({ isOpen, onClose, initialData = null 
             <div className="success-icon-wrap">
               <CheckCircle2 size={56} color="#FF823A" />
             </div>
-            <h3 className="success-title">Permintaan Audit Berhasil Diterima!</h3>
+            <h3 className="success-title">Consultation Request Received!</h3>
             <p className="success-desc">
-              Terima kasih, <strong>{formData.fullName}</strong>. Data Anda telah masuk ke antrean prioritas tim Solutions Architect <strong>OraRose Tech</strong>.
+              Thank you, <strong>{formData.fullName}</strong>. Your request has been queued with OraRose Tech's Solutions Architect team.
             </p>
 
             <div className="success-ticket-box">
-              <span className="ticket-label">NOMOR TIKET DISCOVERY:</span>
+              <span className="ticket-label">DISCOVERY TICKET ID:</span>
               <span className="ticket-number">{ticketId}</span>
             </div>
 
             <p className="success-next-step">
-              Arsitek kami akan menghubungi Anda melalui email <strong>{formData.workEmail}</strong> atau WhatsApp dalam kurun waktu kurang dari 2 jam kerja untuk konfirmasi jadwal discovery call.
+              Our architects will contact you via email at <strong>{formData.workEmail}</strong> within 2 business hours to confirm your discovery call schedule.
             </p>
 
             <div className="success-actions">
-              <button onClick={handleSendToWhatsApp} className="btn btn-primary">
-                <PhoneCall size={18} />
-                <span>Langsung Chat Arsitek Sekarang</span>
+              <button onClick={handleSendToEmail} className="btn btn-primary">
+                <Mail size={18} />
+                <span>Email Architect Directly</span>
               </button>
               <button onClick={onClose} className="btn btn-secondary">
-                Kembali ke Website
+                Return to Website
               </button>
             </div>
           </div>

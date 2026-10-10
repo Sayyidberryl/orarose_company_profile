@@ -17,7 +17,7 @@ export default function Hero({ onOpenConsultation }) {
           <div className="hero-badge-wrapper">
             <span className="section-header-badge">
               <span className="badge-dot"></span>
-              REKAYASA SISTEM CERDAS &amp; PIRANTI LUNAK PERUSAHAAN
+              INTELLIGENT SYSTEMS &amp; ENTERPRISE SOFTWARE ENGINEERING
             </span>
           </div>
 
@@ -27,19 +27,19 @@ export default function Hero({ onOpenConsultation }) {
           </h1>
 
           <p className="hero-subtext">
-            OraRose Tech merancang produk SaaS cerdas dan solusi piranti lunak terintegrasi. 
-            Membantu organisasi memodernisasi alur kerja manual, mengintegrasikan otomasi AI, 
-            dan mengakselerasi pertumbuhan bisnis dengan ekosistem digital yang tangguh.
+            OraRose Tech engineers intelligent SaaS platforms and integrated enterprise software. 
+            We help ambitious organizations modernize manual workflows, integrate AI-driven automation, 
+            and accelerate business scaling with resilient digital ecosystems.
           </p>
 
           <div className="hero-cta-group">
             <button
               type="button"
-              onClick={() => onOpenConsultation && onOpenConsultation('Konsultasi Arsitektur Sistem')}
+              onClick={() => onOpenConsultation && onOpenConsultation('Systems Architecture Consultation')}
               className="btn btn-primary btn-lg"
               id="hero-primary-cta"
             >
-              <span>Diskusikan Kebutuhan Sistem</span>
+              <span>Discuss Your Infrastructure</span>
               <ArrowRight size={18} />
             </button>
 
@@ -49,7 +49,7 @@ export default function Hero({ onOpenConsultation }) {
               id="hero-secondary-cta"
             >
               <Zap size={18} className="icon-orange" />
-              <span>Masalah yang Kami Tangani</span>
+              <span>Core Challenges We Solve</span>
             </a>
           </div>
 

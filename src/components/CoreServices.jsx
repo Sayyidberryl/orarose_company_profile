@@ -14,43 +14,43 @@ export default function CoreServices({ onSelectService }) {
       id: 'ai-operations',
       badge: 'ARTIFICIAL INTELLIGENCE',
       icon: Bot,
-      title: 'AI & Otomasi Operasional',
-      subtitle: 'Otomasi Cerdas Alur Kerja Bisnis',
-      desc: 'Mentransformasi proses manual menjadi alur kerja otomatis yang terintegrasi dengan data internal perusahaan dengan kontrol data dan deployment terisolasi.',
+      title: 'AI & Operational Automation',
+      subtitle: 'Intelligent Workflow Automation',
+      desc: 'Transforming manual processes into automated workflows integrated with corporate data, ensuring strict data governance and isolated deployment.',
       features: [
-        'Otomasi alur kerja & tugas operasional rutin',
-        'Asisten AI cerdas berbasis data privat perusahaan',
-        'Analisis prediktif terarah untuk percepatan keputusan'
+        'Automation of routine workflows & operational tasks',
+        'Private data-driven intelligent AI assistants',
+        'Targeted predictive analysis for rapid decision-making'
       ],
-      metric: 'Target: Pengurangan waktu proses repetitif & eliminasi kesalahan manual'
+      metric: 'Elimination of repetitive bottlenecks & manual errors'
     },
     {
       id: 'legacy-modernization',
       badge: 'INFRASTRUCTURE UPGRADE',
       icon: RefreshCw,
-      title: 'Modernisasi Sistem Kritis',
-      subtitle: 'Pembaruan Sistem Lama ke Cloud',
-      desc: 'Memperbarui aplikasi dan database lama yang lambat menjadi sistem modern yang andal dan terukur dengan minim gangguan terhadap operasional.',
+      title: 'Legacy System Modernization',
+      subtitle: 'Cloud-Native Upgrades',
+      desc: 'Revitalizing sluggish legacy applications and databases into highly scalable, reliable modern systems with zero operational downtime.',
       features: [
-        'Migrasi sistem & data dengan minim gangguan operasional',
-        'Arsitektur cloud modern yang lebih efisien & stabil',
-        'Peningkatan performa respon dan ketahanan sistem'
+        'Zero-downtime system & secure data migration',
+        'Highly efficient & stable cloud-native architecture',
+        'Massive improvements in system response & resilience'
       ],
-      metric: 'Target: Efisiensi biaya infrastruktur & sistem lebih tangguh'
+      metric: 'Infrastructure cost efficiency & maximum uptime'
     },
     {
       id: 'enterprise-architecture',
       badge: 'DIGITAL PLATFORMS',
       icon: Smartphone,
-      title: 'Platform Web & Mobile',
-      subtitle: 'Aplikasi Bisnis Skala Besar',
-      desc: 'Membangun platform web dan aplikasi mobile kustom berkinerja tinggi dengan standar keamanan korporasi yang siap mendukung skalabilitas bisnis Anda.',
+      title: 'Web & Mobile Platforms',
+      subtitle: 'Enterprise-Scale Applications',
+      desc: 'Engineering high-performance custom web and mobile platforms with stringent corporate security standards, built for massive scalability.',
       features: [
-        'Aplikasi web & mobile modern dengan performa responsif',
-        'Integrasi API dengan authentication, authorization, encryption, dan audit logging',
-        'Pilihan model fleksibel: platform siap pakai (SaaS) maupun kustom'
+        'Modern web & mobile applications with native performance',
+        'API integrations with robust auth, encryption, and audit logging',
+        'Flexible deployment: ready-to-use SaaS or fully custom builds'
       ],
-      metric: 'Target: Performa responsif dan stabil pada beban tinggi'
+      metric: 'Responsive stability under extreme computational loads'
     }
   ];
 
@@ -60,13 +60,13 @@ export default function CoreServices({ onSelectService }) {
         <div className="section-center">
           <span className="section-header-badge">
             <span className="badge-dot"></span>
-            SOLUSI REKAYASA // CORE CAPABILITIES
+            CORE CAPABILITIES // ENGINEERING SOLUTIONS
           </span>
           <h2 className="section-title">
-            Solusi Rekayasa: <span className="text-highlight">AI &amp; Sistem Modern</span> untuk Bisnis
+            Engineering Solutions: <span className="text-highlight">AI &amp; Modern Systems</span>
           </h2>
           <p className="section-description">
-            Pendekatan rekayasa terarah untuk mengotomasi alur kerja, meremajakan sistem lama, dan membangun platform digital tangguh yang siap mendukung pertumbuhan perusahaan Anda.
+            A targeted engineering approach to automate workflows, revitalize legacy systems, and build resilient digital platforms ready to accelerate your enterprise growth.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function CoreServices({ onSelectService }) {
 
                 <div className="service-card-footer">
                   <div className="service-impact-badge">
-                    <span className="impact-label">Fokus:</span>
+                    <span className="impact-label">Target:</span>
                     <span className="impact-val">{service.metric}</span>
                   </div>
 
@@ -114,7 +114,7 @@ export default function CoreServices({ onSelectService }) {
                     onClick={() => onSelectService(service.title)}
                     className="btn btn-secondary service-action-btn"
                   >
-                    <span>Diskusikan Solusi Ini</span>
+                    <span>Discuss This Solution</span>
                     <ArrowRight size={15} />
                   </button>
                 </div>

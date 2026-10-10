@@ -15,10 +15,10 @@ export default function Navbar({ onOpenConsultation }) {
   }, []);
 
   const navLinks = [
-    { label: 'Masalah & Solusi', href: '#problem-solutions' },
-    { label: 'Tentang Kami', href: '#about' },
-    { label: 'Kapabilitas Rekayasa', href: '#services' },
-    { label: 'Model Kerja Sama', href: '#engagement' },
+    { label: 'Challenges & Solutions', href: '#problem-solutions' },
+    { label: 'Philosophy', href: '#philosophy' },
+    { label: 'Engineering Capabilities', href: '#services' },
+    { label: 'Engagement Model', href: '#engagement' },
   ];
 
   return (
@@ -44,14 +44,12 @@ export default function Navbar({ onOpenConsultation }) {
         {/* Desktop Actions */}
         <div className="nav-actions">
           <a
-            href="https://wa.me/6281234567890?text=Halo%20Tim%20OraRose%20Tech,%20saya%20ingin%20mendiskusikan%20kebutuhan%20teknologi/otomasi%20untuk%20bisnis%20kami."
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:business@orarose.id"
             className="nav-chat-minimal"
-            title="Hubungi via WhatsApp Bisnis"
+            title="Email our Business Desk"
           >
             <PhoneCall size={14} />
-            <span>Chat</span>
+            <span>Email</span>
           </a>
 
           <button
@@ -59,7 +57,7 @@ export default function Navbar({ onOpenConsultation }) {
             className="nav-cta-minimal"
             id="nav-consultation-btn"
           >
-            <span>Diskusikan Kebutuhan</span>
+            <span>Discuss Your Needs</span>
             <ArrowUpRight size={14} />
           </button>
 
@@ -99,18 +97,16 @@ export default function Navbar({ onOpenConsultation }) {
               className="btn btn-primary"
               style={{ width: '100%' }}
             >
-              <span>Diskusikan Kebutuhan Anda</span>
+              <span>Discuss Your Needs</span>
               <ArrowUpRight size={16} />
             </button>
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Tim%20OraRose%20Tech,%20saya%20ingin%20mendiskusikan%20kebutuhan%20teknologi/otomasi%20untuk%20bisnis%20kami."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:business@orarose.id"
               className="btn btn-secondary"
               style={{ width: '100%', marginTop: '10px' }}
             >
               <PhoneCall size={16} />
-              <span>Direct WhatsApp Desk</span>
+              <span>Contact Business Desk</span>
             </a>
           </div>
         </div>
