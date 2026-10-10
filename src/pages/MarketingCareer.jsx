@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Briefcase, Globe, UserPlus, HeartHandshake } from 'lucide-react';
+import Logo from '../components/Logo';
 import './MarketingCareer.css';
 
 export default function MarketingCareer() {
@@ -9,7 +10,7 @@ export default function MarketingCareer() {
         
         {/* Brand Header */}
         <div className="career-brand-header">
-          <img src="/Orarose_logo.png" alt="OraRose Logo" className="career-brand-logo" />
+          <Logo size="normal" showTagline={false} />
           <div className="company-legal-badge">PT. ORAROSE INTELEGENT TECHNOLOGY</div>
         </div>
 

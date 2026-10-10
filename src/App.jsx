@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ConsultationModal from './components/ConsultationModal';
 import Home from './pages/Home';
 import MarketingCareer from './pages/MarketingCareer';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home onOpenConsultation={handleOpenConsultation} />} />
         <Route path="/career/marketing" element={<MarketingCareer />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       {/* Footer */}

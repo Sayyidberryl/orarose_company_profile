@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
 import { ArrowUpRight, Menu, X, PhoneCall } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ onOpenConsultation }) {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +25,9 @@ export default function Navbar({ onOpenConsultation }) {
   return (
     <header className={`navbar-wrapper ${scrolled ? 'scrolled' : ''}`}>
       <div className="section-container navbar-inner">
-        <a href="#" className="nav-brand-link" aria-label="OraRose Tech Home">
+        <Link to="/" className="nav-brand-link" aria-label="OraRose Tech Home">
           <Logo size="small" showTagline={false} />
-        </a>
+        </Link>
 
         {/* Desktop Nav Items */}
         <nav className="desktop-nav" aria-label="Main Navigation">
