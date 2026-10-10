@@ -103,10 +103,7 @@ export default function Footer({ onOpenConsultation }) {
               <Mail size={16} className="contact-icon text-orange" />
               <a href="mailto:business@orarose.id">business@orarose.id</a>
             </div>
-            <div className="contact-item">
-              <Phone size={16} className="contact-icon text-orange" />
-              <a href="tel:+6281234567890">+62 812-3456-7890</a>
-            </div>
+
             <div className="contact-item">
               <Clock size={16} className="contact-icon text-orange" />
               <span>Monday - Friday: 08:30 - 18:00 WIB</span>

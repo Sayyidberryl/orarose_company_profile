@@ -1,51 +1,42 @@
 import React from 'react';
-import { CheckCircle2, Megaphone, ArrowRight, UserSearch } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Briefcase, Globe, UserPlus, HeartHandshake } from 'lucide-react';
 import './MarketingCareer.css';
 
 export default function MarketingCareer() {
   return (
     <main className="career-page">
-      <div className="career-container section-container">
+      <div className="section-container">
+        
+        {/* Brand Header */}
+        <div className="career-brand-header">
+          <img src="/Orarose_logo.png" alt="OraRose Logo" className="career-brand-logo" />
+          <div className="company-legal-badge">PT. ORAROSE INTELEGENT TECHNOLOGY</div>
+        </div>
+
         <div className="career-grid">
           
           {/* Left Column: Typography & Content */}
           <div className="career-content">
-            <div className="section-header-badge animate-float">
+            <div className="section-header-badge">
               <span className="badge-dot"></span>
               Join OraRose Tech
             </div>
             
             <h1 className="career-hero-title">
-              <span className="text-highlight block-text">WE ARE</span>
-              <span className="text-highlight block-text">HIRING</span>
+              MARKETING
             </h1>
             
             <p className="career-hero-subtitle">
-              Take the next step in your career journey. <br/>
-              We are hiring exceptional talent to shape a brighter future.
+              We are looking for exceptional marketing talent to join our team. 
+              Help us connect our enterprise AI solutions and software engineering excellence with the businesses that need them most.
             </p>
 
-            <div className="role-badge">
-              <h2>MARKETING</h2>
-              <span className="role-type">PROJECT-BASED / FLEXIBLE</span>
-            </div>
-
-            <div className="requirements-list">
-              <div className="requirement-item">
-                <CheckCircle2 className="req-icon" />
-                <p>Strong communication and interpersonal skills</p>
+            <div className="role-meta-tags">
+              <div className="meta-tag">
+                <Briefcase size={16} /> Project-Based / Flexible
               </div>
-              <div className="requirement-item">
-                <CheckCircle2 className="req-icon" />
-                <p>Marketing, sales, or business development experience is a plus</p>
-              </div>
-              <div className="requirement-item">
-                <CheckCircle2 className="req-icon" />
-                <p>Strong networking and relationship-building abilities</p>
-              </div>
-              <div className="requirement-item">
-                <CheckCircle2 className="req-icon" />
-                <p>Educational background is not a primary requirement, capability and initiative matter more.</p>
+              <div className="meta-tag">
+                <Globe size={16} /> Remote Work
               </div>
             </div>
 
@@ -56,39 +47,55 @@ export default function MarketingCareer() {
                 rel="noopener noreferrer" 
                 className="btn btn-primary btn-lg apply-btn"
               >
-                APPLY NOW ! <ArrowRight size={20} />
+                Apply Now <ArrowRight size={20} />
               </a>
-              <p className="whatsapp-number">+62 831-5731-7380</p>
-            </div>
 
-            <div className="company-info-card">
-              <div className="brand-official-logo-wrap">
-                <span className="brand-name-ora" style={{fontWeight: 800, fontSize: '1.2rem'}}>Ora</span>
-                <span className="brand-name-rose" style={{fontWeight: 800, fontSize: '1.2rem'}}>Rose</span>
-                <span className="brand-name-tech">TECH</span>
-              </div>
-              <div className="company-legal">PT. ORAROSE INTELEGENT TECHNOLOGY</div>
             </div>
           </div>
 
           {/* Right Column: Visual Elements */}
           <div className="career-visuals">
-             <div className="visual-graphic card-modern">
-                <div className="icon-wrapper megaphone-wrapper animate-float">
-                  <Megaphone size={120} className="text-orange" />
-                </div>
-                <div className="icon-wrapper search-wrapper">
-                  <UserSearch size={80} className="icon-navy" />
-                </div>
-                <div className="decorative-circle circle-1"></div>
-                <div className="decorative-circle circle-2"></div>
-                <div className="floating-badge top-badge">Join Our Team</div>
+             <div className="image-wrapper">
+                <img src="/gambar_marketing.webp" alt="Marketing Career at OraRose Tech" className="career-image" />
+                <div className="decorative-element shape-1"></div>
+                <div className="decorative-element shape-2"></div>
              </div>
           </div>
 
         </div>
+
+        {/* Requirements Section */}
+        <div className="requirements-section">
+          <div className="requirements-header">
+            <h2 className="section-title">Who we are looking for</h2>
+            <p className="section-description">We value drive, capability, and real-world skills over traditional educational backgrounds.</p>
+          </div>
+          
+          <div className="requirements-grid">
+            <div className="req-card card-modern">
+              <div className="req-icon-wrap"><HeartHandshake size={24} /></div>
+              <h3>Communication</h3>
+              <p>Strong communication and interpersonal skills. You know how to build meaningful connections.</p>
+            </div>
+            <div className="req-card card-modern">
+              <div className="req-icon-wrap"><Briefcase size={24} /></div>
+              <h3>Experience</h3>
+              <p>Prior experience in marketing, sales, or business development is a significant plus.</p>
+            </div>
+            <div className="req-card card-modern">
+              <div className="req-icon-wrap"><UserPlus size={24} /></div>
+              <h3>Networking</h3>
+              <p>Strong networking abilities. You thrive on expanding reach and creating partnerships.</p>
+            </div>
+            <div className="req-card card-modern highlight-card">
+              <div className="req-icon-wrap"><CheckCircle2 size={24} /></div>
+              <h3>Initiative</h3>
+              <p>Educational background is not our primary requirement. Your capability and initiative matter more.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
   );
 }
-
