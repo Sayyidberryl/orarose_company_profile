@@ -90,8 +90,12 @@ export default function ArchitectureBlueprint({ onOpenConsultation }) {
             const Icon = p.Icon;
             return (
               <div key={i} className="blueprint-pain-card">
-                <div className="bpc-icon"><Icon size={20} /></div>
-                <h3 className="bpc-title">{p.title}</h3>
+                <h3 className="bpc-title">
+                  <span className="bpc-icon" aria-hidden="true">
+                    <Icon size={20} />
+                  </span>
+                  <span>{p.title}</span>
+                </h3>
                 <p className="bpc-desc">{p.desc}</p>
               </div>
             );

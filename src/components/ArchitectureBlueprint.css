@@ -214,18 +214,25 @@
   border-top: 1px solid var(--border-light);
 }
 
-.bpc-icon {
-  margin-bottom: 24px;
-  color: var(--primary-orange);
-}
-
 .bpc-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--navy-dark);
   margin-bottom: 12px;
   line-height: 1.35;
   letter-spacing: -0.01em;
+}
+
+.bpc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-orange);
+  margin-top: 3px;
 }
 
 .bpc-desc {

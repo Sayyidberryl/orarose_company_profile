@@ -1,0 +1,638 @@
+/* ============================================================
+   02 — SECTOR STRATEGY · OraRose Tech
+   Layout: editorial left-nav + content panel
+   ============================================================ */
+
+.seg-section {
+  background: var(--bg-base);
+  padding: 120px 0 128px;
+  border-top: 1px solid var(--navy-border);
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.seg-header {
+  margin-bottom: 72px;
+}
+
+.seg-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-orange);
+  margin-bottom: 20px;
+}
+
+.seg-title {
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.seg-title em {
+  font-style: italic;
+  font-weight: 800;
+  color: var(--primary-orange);
+}
+
+/* ── Main layout ─────────────────────────────────────────── */
+.seg-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  border: 1px solid var(--navy-border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* ── Left nav ────────────────────────────────────────────── */
+.seg-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--navy-border);
+  background: var(--bg-light);
+  position: relative;
+}
+
+.seg-tabs-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.seg-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  gap: 6px;
+  padding: 24px;
+  border: none;
+  border-bottom: 1px solid var(--navy-border);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.seg-tab:hover {
+  background: rgba(249, 115, 22, 0.03);
+}
+
+.seg-tab--active {
+  background: var(--bg-card);
+  margin-right: -1px;
+  border-right: 1px solid var(--bg-card);
+  z-index: 2;
+}
+
+/* Active left orange bar */
+.seg-tab--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  background: var(--primary-orange);
+  border-radius: 0 2px 2px 0;
+}
+
+.seg-tab-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.seg-tab-num {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  transition: color 0.2s ease;
+}
+
+.seg-tab--active .seg-tab-num {
+  color: var(--primary-orange);
+}
+
+.seg-tab-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.seg-tab--active .seg-tab-indicator {
+  background: var(--primary-orange);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}
+
+.seg-tab-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.seg-tab--active .seg-tab-label {
+  color: var(--navy-dark);
+}
+
+.seg-tab-sub {
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  line-height: 1.45;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.seg-tab--active .seg-tab-sub {
+  color: var(--text-secondary);
+}
+
+/* Bottom footnote inside left nav */
+.seg-nav-footnote {
+  padding: 24px;
+  border-top: 1px solid var(--navy-border);
+  background: rgba(0, 0, 0, 0.015);
+  margin-top: auto;
+}
+
+.seg-footnote-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--primary-orange);
+  margin-bottom: 6px;
+}
+
+.seg-footnote-text {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Right content ───────────────────────────────────────── */
+.seg-content {
+  position: relative;
+  overflow: hidden;
+  contain: paint;
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  animation: seg-fade 0.3s ease;
+}
+
+/* ── Full background image from internet ─────────────────── */
+.seg-bg-image-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.seg-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.01) translateZ(0);
+  will-change: transform;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seg-content:hover .seg-bg-image {
+  transform: scale(1.03) translateZ(0);
+}
+
+/* High-performance pure CSS gradient overlay (Zero compositor stall, 60fps smooth) */
+.seg-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.93) 0%,
+    rgba(255, 255, 255, 0.86) 45%,
+    rgba(255, 255, 255, 0.76) 100%
+  );
+  pointer-events: none;
+}
+
+/* Foreground elements stay cleanly above the background photo */
+.seg-desc,
+.seg-columns,
+.seg-deliverables,
+.seg-cta {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes seg-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.seg-desc {
+  font-size: 1.08rem;
+  color: var(--navy-dark);
+  font-weight: 500;
+  line-height: 1.75;
+  max-width: 660px;
+  margin: 0;
+  border-left: 3px solid var(--primary-orange);
+  padding-left: 20px;
+}
+
+/* ── Two-column problems / solutions ─────────────────────── */
+.seg-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.seg-col-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.seg-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.seg-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.seg-icon-minus {
+  color: #e11d48;
+  background: rgba(225, 29, 72, 0.08);
+  border: 1px solid rgba(225, 29, 72, 0.18);
+  border-radius: 4px;
+  box-sizing: content-box;
+  padding: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.seg-icon-check {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.18);
+  border-radius: 4px;
+  box-sizing: content-box;
+  padding: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Deliverables ────────────────────────────────────────── */
+.seg-deliverables {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 28px;
+  border-top: 1px solid var(--navy-border);
+}
+
+.seg-deliv-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+
+.seg-deliv-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seg-deliv-item {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy-dark);
+  background: var(--bg-light);
+  border: 1px solid var(--navy-border);
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+/* ── CTA ─────────────────────────────────────────────────── */
+.seg-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: var(--shadow-orange);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  align-self: flex-start;
+}
+
+.seg-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-orange-lg);
+}
+
+.seg-cta:active {
+  transform: translateY(0);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .seg-layout {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .seg-nav {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--navy-border);
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .seg-tabs-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .seg-tabs-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seg-nav-footnote {
+    display: none;
+  }
+
+  .seg-tab {
+    border-bottom: none;
+    border-right: 1px solid var(--navy-border);
+    padding: 16px 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .seg-tab-sub {
+    display: none;
+  }
+
+  .seg-tab:last-child {
+    border-right: none;
+  }
+
+  .seg-tab--active::before {
+    top: 0;
+    left: 20%;
+    right: 20%;
+    bottom: auto;
+    width: auto;
+    height: 3px;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .seg-content {
+    padding: 36px 28px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .seg-columns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .seg-section {
+    padding: 64px 0 76px;
+  }
+
+  .seg-header {
+    margin-bottom: 32px;
+  }
+
+  .seg-title {
+    font-size: clamp(1.85rem, 6.5vw, 2.3rem);
+    line-height: 1.15;
+  }
+
+  .seg-layout {
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .seg-nav {
+    padding: 8px 8px 6px;
+    background: #F3F4F6;
+    border-bottom: 1px solid var(--navy-border);
+  }
+
+  .seg-tabs-group {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 2px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .seg-tab {
+    flex: 1 0 auto;
+    min-width: 130px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: all 0.2s ease;
+    text-align: left;
+    white-space: nowrap;
+    gap: 4px;
+  }
+
+  .seg-tab:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .seg-tab--active {
+    background: #FFFFFF;
+    border-color: rgba(30, 58, 95, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+  }
+
+  .seg-tab--active::before {
+    display: none;
+  }
+
+  .seg-tab-top {
+    gap: 6px;
+    margin-bottom: 2px;
+  }
+
+  .seg-tab-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .seg-tab-label {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+  }
+
+  .seg-content {
+    padding: 24px 18px;
+    gap: 22px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .seg-desc {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    padding-left: 14px;
+    border-left-width: 3px;
+    margin: 0;
+  }
+
+  .seg-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .seg-col-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .seg-list {
+    gap: 11px;
+    width: 100%;
+  }
+
+  .seg-list li {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    word-break: normal;
+    overflow-wrap: break-word;
+    gap: 8px;
+  }
+
+  .seg-deliverables {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 18px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .seg-deliv-label {
+    font-size: 0.65rem;
+  }
+
+  .seg-deliv-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .seg-deliv-item {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #FFFFFF;
+    border-color: rgba(30, 58, 95, 0.12);
+  }
+
+  .seg-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+}

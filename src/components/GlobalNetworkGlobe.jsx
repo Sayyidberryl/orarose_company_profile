@@ -148,7 +148,7 @@ export default function GlobalNetworkGlobe() {
         dark: 1, // Deep Dark Midnight Sphere
         diffuse: 1.25,
         scale: 1.04,
-        mapSamples: 22000, // High-fidelity dot matrix
+        mapSamples: 12000, // Optimized for 60fps across all devices
         mapBrightness: 6.8,
         mapBaseBrightness: 0.032,
         baseColor: [0.38, 0.70, 0.98], // Ultra-crisp Luminous Ice-Blue Matrix
@@ -164,7 +164,7 @@ export default function GlobalNetworkGlobe() {
 
       const render = () => {
         if (!isVisible) {
-          animId = requestAnimationFrame(render);
+          // Pause RAF loop completely when scrolled away to other sections
           return;
         }
 
@@ -194,13 +194,19 @@ export default function GlobalNetworkGlobe() {
 
       const observer = new IntersectionObserver(
         ([entry]) => {
+          const wasVisible = isVisible;
           isVisible = entry.isIntersecting;
+          if (isVisible && !wasVisible) {
+            animId = requestAnimationFrame(render);
+          }
         },
         { threshold: 0.05 }
       );
       observer.observe(container);
 
-      animId = requestAnimationFrame(render);
+      if (isVisible) {
+        animId = requestAnimationFrame(render);
+      }
 
       return () => {
         observer.disconnect();

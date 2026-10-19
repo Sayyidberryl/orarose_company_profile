@@ -19,10 +19,6 @@ export default function Footer({ onOpenConsultation }) {
       <div className="section-container">
         <div className="pre-footer-cta-card card-dark">
           <div className="pre-footer-content">
-            <span className="section-header-badge" style={{ background: 'rgba(255, 130, 58, 0.2)' }}>
-              <Sparkles size={14} color="#FF823A" />
-              TECHNOLOGY &amp; AUTOMATION CONSULTATION
-            </span>
             <h2 className="pre-footer-title">
               Ready to Build Systems that Drive <span className="text-highlight">Real Growth?</span>
             </h2>
@@ -121,21 +117,6 @@ export default function Footer({ onOpenConsultation }) {
         <div className="section-container footer-bottom-inner">
           <div className="footer-copy">
             © {CURRENT_YEAR} <strong>PT. ORAROSE INTELEGENT TECHNOLOGY</strong>. All Rights Reserved.
-          </div>
-
-          <div className="footer-standards">
-            <div className="standard-item">
-              <ShieldCheck size={14} className="text-orange" />
-              <span>Zero-Trust Architecture</span>
-            </div>
-            <div className="standard-item">
-              <ShieldCheck size={14} className="text-orange" />
-              <span>Aligned with ISO 27001 Principles</span>
-            </div>
-            <div className="standard-item">
-              <ShieldCheck size={14} className="text-orange" />
-              <span>100% Code Ownership</span>
-            </div>
           </div>
         </div>
       </div>
